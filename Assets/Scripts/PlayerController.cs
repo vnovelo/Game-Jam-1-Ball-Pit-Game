@@ -59,7 +59,12 @@ public class PlayerController : MonoBehaviour
             setCountText();
 
         }
-    }
+		if (other.gameObject.CompareTag("Speed Pad") && canSpUpTime <= 0.0f)
+		{
+			speed *= spIncrease;
+			canSpUpTime = 2.0f;
+		}
+	}
 
     private void setCountText()
     {
@@ -72,12 +77,12 @@ public class PlayerController : MonoBehaviour
 
     /*added by mykenzie*/
     /*Causes ball to speed up on contact with speed pad. Can only be triggered every 2 seconds*/
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Speed Pad") && canSpUpTime <= 0.0f)
         {
             speed *= spIncrease;
             canSpUpTime = 2.0f;
         }
-    }
+    }*/
 }

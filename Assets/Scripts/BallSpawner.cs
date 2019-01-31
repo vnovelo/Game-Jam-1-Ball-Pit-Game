@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BallSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+	public GameObject ball1, ball2, ball3;
+
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
